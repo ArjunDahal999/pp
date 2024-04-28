@@ -3,31 +3,31 @@ import { Link, Tabs } from 'expo-router';
 import { HeaderButton } from '../../components/HeaderButton';
 import { TabBarIcon } from '../../components/TabBarIcon';
 
-export default function TabLayout() {
+export default function TabLayout()
+{
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: 'black',
       }}>
       <Tabs.Screen
-        name="index"
+        name="camera"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <HeaderButton />
-            </Link>
-          ),
+          headerShown: false,
+          title: 'Camera',
+          tabBarIcon: ({ color }) => <TabBarIcon name="camera" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="index"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Map ',
+          headerShown: false,
+          tabBarIcon: ({ color }) => <TabBarIcon name="map" color={color} />,
         }}
       />
+
+
     </Tabs>
   );
 }
